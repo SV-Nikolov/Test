@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Snake</h1>
+      <div class="top-row">
+        <div class="score">Score: <strong id="score">0</strong></div>
+        <div class="highscore">High: <strong id="highscore">0</strong></div>
+      </div>
+
+      <canvas id="game" width="400" height="400"></canvas>
+
+      <div class="info">
+        <div class="controls">Use arrow keys or WASD to move. Press space to pause.</div>
+      </div>
+
+      <div class="settings">
+        <label>Grid:
+          <select id="gridSize">
+            <option value="15">15x15</option>
+            <option value="20" selected>20x20</option>
+            <option value="30">30x30</option>
+          </select>
+        </label>
+        <label>Walls:
+          <select id="wallMode">
+            <option value="wrap" selected>Wrap</option>
+            <option value="solid">Solid (no wrap)</option>
+          </select>
+        </label>
+        <label>Speed:
+          <select id="speed">
+            <option value="160">Slow</option>
+            <option value="120" selected>Normal</option>
+            <option value="80">Fast</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="restart">Restart</button>
+        <button id="toggleSound">Toggle Sound</button>
+      </div>
+
+      <div class="mobile-controls" id="mobileControls">
+        <button class="mc up">▲</button>
+        <div class="mc-row">
+          <button class="mc left">◀</button>
+          <button class="mc down">▼</button>
+          <button class="mc right">▶</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
